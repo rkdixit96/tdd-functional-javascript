@@ -1,10 +1,16 @@
 let count = 0;
 
 function repeat(operation, num){
-	for(let i = 0; i < num; i++){
-		operation();
-		counter();
+	if (num > 0){
+		for(let i = 0; i < num; i++){
+			operation();
+			counter();
+		}
 	}
+	else {
+		//pass
+	}
+	
 	
 }
 
@@ -17,11 +23,15 @@ function resetCounter(){
 }
 
 function testing(){
-	let num = 0;
+	let num = 5;
 	repeat(operation,num);
 	console.log("Basic functionality:",count === num);
 	resetCounter()
-	console.log("Checking for 0 length:",count === num);
+	num = 0;
+	console.log("Checking for num 0:",count === num);
+	resetCounter();
+	num = -1;
+	console.log("Checking for negative num:",count === 0);
 }
 
 function operation(){
