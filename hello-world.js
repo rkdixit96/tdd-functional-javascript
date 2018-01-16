@@ -3,7 +3,7 @@ function upperCaser(input) {
 		return input.toUpperCase();
 	}
 	else{
-		//pass
+		return null;
 	}
 	
 }
