@@ -12,19 +12,19 @@ function countWords(inputWords){
 }
 
 function testing(){
-	result = countWords(['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']);
-	console.log(result)
+	let result = countWords(["Apple", "Banana", "Apple", "Durian", "Durian", "Durian"]);
+	console.log(result);
 	console.log("Basic functionality:",isEqual(result, {
-       Apple: 2,
-       Banana: 1,
-       Durian: 3
-    }));
-    console.log("Empty input:", isEqual(countWords([]),{}));
-    console.log("Negative test case:" ,!isEqual(result, {
-       Apple: 2,
-       Banana: 1,
-       Durian: 4
-    }))
+		Apple: 2,
+		Banana: 1,
+		Durian: 3
+	}));
+	console.log("Empty input:", isEqual(countWords([]),{}));
+	console.log("Negative test case:" ,!isEqual(result, {
+		Apple: 2,
+		Banana: 1,
+		Durian: 4
+	}));
 }
 
 function isEqual(obj1, obj2){
@@ -36,7 +36,7 @@ function isEqual(obj1, obj2){
 	}
 
 	for (let i = 0; i < obj1Props.length; i++){
-		prop = obj1Props[i];
+		let prop = obj1Props[i];
 		if (obj1[prop] != obj2[prop]){
 			return false;
 		}
@@ -46,4 +46,4 @@ function isEqual(obj1, obj2){
 
 }
 
-testing()
+testing();
