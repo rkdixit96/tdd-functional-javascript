@@ -31,14 +31,13 @@ function isEqual(obj1, obj2){
 	let obj1Props = Object.getOwnPropertyNames(obj1);
 	let obj2Props = Object.getOwnPropertyNames(obj2);
 
-	if (obj1Props.length !== obj2Props.length){
+	if (obj1Props.length != obj2Props.length){
 		return false;
 	}
 
 	for (let i = 0; i < obj1Props.length; i++){
 		prop = obj1Props[i];
-
-		if (obj1Props[i] !== obj2Props[i]){
+		if (obj1[prop] != obj2[prop]){
 			return false;
 		}
 	}
