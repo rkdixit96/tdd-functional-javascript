@@ -1,6 +1,6 @@
 function getShortMessages(messages){
 	return messages.filter(function lessThanFifty(mess){
-		return mess.message.length < 50ja;
+		return mess.message.length < 50;
 	}).map(mess => mess.message); 
 
 }
