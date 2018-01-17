@@ -7,7 +7,7 @@ function countWords(inputWords){
 			allWords[word]=1;
 		}
 		return allWords;
-	},{})
+	},{});
 
 }
 
