@@ -1,11 +1,12 @@
 function duckCount(){
 	//call is used to get access to functions/objects of other objects
-	console.log(arguments)
+	//console.log(arguments)
 	var arr = [].slice.call(arguments);
-	console.log(arr);
+	//console.log(arr);
 	//console.log(typeof arr)
+	a = {}
 	return arr.reduce(function counter (nDucks, obj){
-		if(Object.prototype.hasOwnProperty.call(obj,'quack')){
+		if(a.hasOwnProperty.call(obj,'quack')){
 			nDucks += 1;
 		}
 		return nDucks;
@@ -19,7 +20,6 @@ function testing(){
 	console.log("Negative case:", duckCount({quack:true},{quack:true}) != 1);
 	console.log("No parameter that has property:", duckCount({notquack: false}) === 0);
 	console.log("Function has no parameters:",duckCount()===0);
-
 }
 
 testing();
