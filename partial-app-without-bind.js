@@ -11,9 +11,7 @@ function logger(namespace){
 
 
 
-function testing(){
-	console.log("Basic functionality:", doesLogMessage(logger("info")("Hello I need","whatever"),"info Hello I need whatever"))
-}
+console.log("Return type of function:", typeof logger("info")==="function")
 
 module.exports = logger
 
