@@ -19,6 +19,7 @@ function testing(){
 	console.log("Basic functionality:", duckCount({quack: true}) === 1);
 	console.log("Negative case:", duckCount({quack:true},{quack:true}) != 1);
 	console.log("No parameter that has property:", duckCount({notquack: false}) === 0);
+	console.log("Object not created from Object.prototype template")
 	console.log("Function has no parameters:",duckCount()===0);
 }
 
